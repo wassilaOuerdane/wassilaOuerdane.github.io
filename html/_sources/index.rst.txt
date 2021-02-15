@@ -1,0 +1,39 @@
+.. MultiAgent Systems documentation master file, created by
+   sphinx-quickstart on Tue Dec 22 17:38:13 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Multiagent Systems: architercture and reasoning
+================================================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   cours-0
+   cours-1
+   part-1
+   part-2
+   part-3
+   part-3-opt
+   correction-part-2
+   cours-2
+   part-4
+   cours-3
+   part-5
+   part-6
+   cours-4
+   part-7
+   cours-5
+   part-8
+   cours-6
+   part-9
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
