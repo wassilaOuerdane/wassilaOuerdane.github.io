@@ -1,9 +1,9 @@
-1.4. The Mesa platform for Python
+I.4. The Mesa platform for Python
 =================================
 
 **Mesa** is a Python framework for agent-based modeling. Getting started with Mesa is easy. In this section, we will walk through creating a simple model and progressively add functionality which will illustrate Mesa's core features. The running example will be the implementation of a simple Agent-based Computational Economics (ACE) model that simulates distributions of money, income, and wealth in society using statistical physics. A complete description of the model can be found in `this paper <https://arxiv.org/abs/cond-mat/0211175>`_.
 
-1. Installation
+Installation
 ------------
 
 Mesa requires Python 3 and does not work in Python 2 environments. **Make sure your environment is set up with Python 3**.
@@ -141,7 +141,7 @@ Running three steps of the system with N=4 should produce the following output (
 Check your code with your neighbour of with the teachers.
 
 
-2. The Money example
+The Money example
 -----------------
 
 Our goal is to implement a simple agent model in which each agent has only one variable that represents **how much wealth it currently has** (each agent will also have a unique identifier as in the example above). We want the agent to adopt the following behaviour at each step of their execution (*i.e.* in their *procedural loop*):
@@ -186,7 +186,7 @@ Implement a ``MoneyModel`` class that creates ``N`` money-agents. Run some steps
     plt.show()
 
 
-3. Adding a spatial environment
+Adding a spatial environment
 ----------------------------
 
 Many agent-based models have a spatial element, with agents moving around and interacting with nearby neighbors. Mesa supports two overall kinds of spaces:

@@ -1,4 +1,4 @@
-1.5. Optional features
+I.5. Optional features
 ======================
 
 This section presents two **optional** features of Mesa. They will be useful in the third session of the course (not next week, but the next one). You can skip it for now and consider today's session over. You will be able to come back to this tutorial later if required.

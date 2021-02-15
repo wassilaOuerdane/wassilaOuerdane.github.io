@@ -1,4 +1,4 @@
-1.1. a Brief History of Multiagent Systems
+I.1. a Brief History of Multiagent Systems
 ==========================================
 
 Multiagent Systems are a part of Computer Science, at the frontier between *software engineering*, *distributed computing* and *artificial intelligence*. They appeared in the 1990s when the research and engineering questions of these three subfields came to similar solutions to deal with different problems. Understanding multiagent programming and multiagent simulation requires to have all three aspects of MAS in mind.

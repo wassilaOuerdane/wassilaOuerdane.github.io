@@ -1,10 +1,12 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <title>1.1. a Brief History of Multiagent Systems &#8212; MultiAgent Systems 2020-2021 documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>I.1. a Brief History of Multiagent Systems &#8212; MultiAgent Systems 2020-2021 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -18,7 +20,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="I.2. What Is an Agent" href="part-2.html" />
-    <link rel="prev" title="1. Introduction to MAS : definitions and implementation of a platform" href="cours-1.html" /> 
+    <link rel="prev" title="Multiagent Systems: architercture and reasoning – First session" href="cours-1.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -30,7 +32,7 @@
           <a href="part-2.html" title="I.2. What Is an Agent"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="cours-1.html" title="1. Introduction to MAS : definitions and implementation of a platform"
+          <a href="cours-1.html" title="Multiagent Systems: architercture and reasoning – First session"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MultiAgent Systems 2020-2021 documentation</a> &#187;</li> 
       </ul>
@@ -41,8 +43,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="a-brief-history-of-multiagent-systems">
-<h1>1.1. a Brief History of Multiagent Systems<a class="headerlink" href="#a-brief-history-of-multiagent-systems" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="i-1-a-brief-history-of-multiagent-systems">
+<h1>I.1. a Brief History of Multiagent Systems<a class="headerlink" href="#i-1-a-brief-history-of-multiagent-systems" title="Permalink to this headline">¶</a></h1>
 <p>Multiagent Systems are a part of Computer Science, at the frontier between <em>software engineering</em>, <em>distributed computing</em> and <em>artificial intelligence</em>. They appeared in the 1990s when the research and engineering questions of these three subfields came to similar solutions to deal with different problems. Understanding multiagent programming and multiagent simulation requires to have all three aspects of MAS in mind.</p>
 <p>For each field, we give a brief history of the domain to show how MAS apperead as a breakthrough in this research area. We identify the key characteristics of MAS that issued from this field. The fourth section concludes on the definition of agents. The last section gives an overview of MAS concrete applications.</p>
 <div class="section" id="mas-as-seen-by-a-software-engineer">
@@ -51,7 +53,7 @@
 <p>In the 90s, software engineering research moved from the notion of objects to the notion of <em>service</em>. The core idea is that a piece of code, possibly a thread, should be provided with some machine-understandable interface that could allow other code to use it without a priori knowledge of its operational content. Such interface defines which method to call first, what are the expected properties of the outputs given the inputs for each method, <em>etc</em>. Software engineers rely on <strong>interaction protocols</strong> to define how the different services should be assembled, how the information has to be exchanged between them, so as to produce some expected result. Multiagent systems were proposed in this context as a series of platforms to support the development of such service-oriented software, with coordination entities capable to interpreting protocols.</p>
 <div class="figure align-center" id="id1">
 <img alt="_images/OASIS-coordinator.gif" src="_images/OASIS-coordinator.gif" />
-<p class="caption"><span class="caption-text"><a class="reference external" href="http://docs.oasis-open.org/ws-tx/wstx-wscoor-1.1-spec-os/wstx-wscoor-1.1-spec-os.html">The OASIS Web Services Coordination standard (version 1.1, 2007)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://docs.oasis-open.org/ws-tx/wstx-wscoor-1.1-spec-os/wstx-wscoor-1.1-spec-os.html">The OASIS Web Services Coordination standard (version 1.1, 2007)</a></span></p>
 </div>
 <p>As a consequence, for a software engineer’s point of view, what matters in multiagent systems is the possibility to <strong>assemble separate components or threads by designing well-formed interaction protocols</strong>. These protocols ensure that the right methods are called, that the answer are of correct type wrt the expectation of the calling method, etc. It is also important for software engineers to have a specific programming language to define the behaviour of the agents. As we shall see in sessions 4 to 7 of this course, logic-based programming and its relation to AI played a key role in this regards.</p>
 </div>
@@ -59,7 +61,7 @@
 <h2>2. MAS as seen by a distributed systems engineer<a class="headerlink" href="#mas-as-seen-by-a-distributed-systems-engineer" title="Permalink to this headline">¶</a></h2>
 <p>Distributed computing and more generally distributed systems originally developed in the 60s but they really became popular in the 70s with the development of <a class="reference external" href="https://en.wikipedia.org/wiki/ARPANET">Arpanet</a> (the predecessor of Internet) and distributed architectures such as client-server models in the 80s. The core idea behind distributed systems is that different processes are located on different physical systems (all connected by some network infrastructure) and interact with each other using some message passing mechanism. Actually, the <em>agents</em> (or processes) can run on one single computer. What matters is that they have <em>independent memory spaces</em> and <em>runtimes</em>. As a consequence, they cannot rely on <em>synchronous</em> interactions as is usually done with classical function calls. Multiagent systems were designed in this context to support such asynchronous runtimes.</p>
 <p>Let us illustrate this notion with a concrete example. In the following code, the calling function waits for the <code class="docutils literal notranslate"><span class="pre">compute</span></code> function to end before the code continues. When reaching the “end of code” line, the value of <code class="docutils literal notranslate"><span class="pre">res</span></code> is guaranteed by the fact that the function was properly terminated. The whole code is synchronous.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="o">...</span> <span class="n">computation</span> <span class="n">here</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">result</span>
 
@@ -71,14 +73,14 @@
 </div>
 <p>On the contrary, distributed system consider situation in which several problems can occur:</p>
 <ul class="simple">
-<li><p>The called process can not be running, or even not be accessible in the system;</p></li>
-<li><p>The called process can not answer, whatever the reason;</p></li>
-<li><p>If an answer arrives, there is no guarantee on the delay before it arrives;</p></li>
+<li>The called process can not be running, or even not be accessible in the system;</li>
+<li>The called process can not answer, whatever the reason;</li>
+<li>If an answer arrives, there is no guarantee on the delay before it arrives;</li>
 </ul>
 <p>All these problems assume a perfectly functioning infrastructure: it is not about having a network failure or whatever. It is about programming a piece of software by taking into account the fact that the other half of the code is run in a completely asynchronous manner. This means two things:</p>
 <ol class="arabic simple">
-<li><p>Agents send message but don’t <em>wait</em> for the answer: they must carry on their activity while a possible answer is computed by another agent;</p></li>
-<li><p>Agents must use timeouts to deal with the absence of answers.</p></li>
+<li>Agents send message but don’t <em>wait</em> for the answer: they must carry on their activity while a possible answer is computed by another agent;</li>
+<li>Agents must use timeouts to deal with the absence of answers.</li>
 </ol>
 <p>For a distributed system engineer, what matters in multiagent systems is the capacity of agent to <strong>deal with asynchronous interactions</strong> and possible errors. Of course, it is also important to support the distribution of the system among different physical supports but one can imagine a multiagent system that runs on a single computer (this is the case of most existing MAS architectures).</p>
 </div>
@@ -126,10 +128,10 @@
 <h3>Collective Intelligence<a class="headerlink" href="#collective-intelligence" title="Permalink to this headline">¶</a></h3>
 <p>While AI researchers worked on action representation in the 80s, two new approaches emerged in the domain:</p>
 <ol class="arabic">
-<li><p>Taking inspiration in the research by philosopher <a class="reference external" href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-8640.1988.tb00284.x">Michael Bratman</a>, some researchers such as <a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.8441&amp;rep=rep1&amp;type=pdf">Cohen and Levesque</a> proposed a new logic for modelling actions and changes and simulating human-like behaviour. This logic is called <strong>BDI</strong> for Beliefs, Desires and Intentions. The core idea is that the agent selects one of its desires (or goals) and, using its Beliefs about the situation, turns this desire into an intention that can be achieved by a plan (or sequence of actions).</p>
+<li><p class="first">Taking inspiration in the research by philosopher <a class="reference external" href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-8640.1988.tb00284.x">Michael Bratman</a>, some researchers such as <a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.8441&amp;rep=rep1&amp;type=pdf">Cohen and Levesque</a> proposed a new logic for modelling actions and changes and simulating human-like behaviour. This logic is called <strong>BDI</strong> for Beliefs, Desires and Intentions. The core idea is that the agent selects one of its desires (or goals) and, using its Beliefs about the situation, turns this desire into an intention that can be achieved by a plan (or sequence of actions).</p>
 <p>This research is about programming systems that simulate human decision making for action selection based on its perception of the environment.</p>
 </li>
-<li><p>Taking inspiration in social animals such that can build complex structures such as ant nests or bird flocking, other researchers in AI took an interest in <strong>collective intelligence</strong>. In this domain, the goal is not to find solutions to a problem by combining several basic behaviours. The solution does not arise from the behaviour of one single individual, but it <em>emerges</em> from the interactions between the individuals.</p>
+<li><p class="first">Taking inspiration in social animals such that can build complex structures such as ant nests or bird flocking, other researchers in AI took an interest in <strong>collective intelligence</strong>. In this domain, the goal is not to find solutions to a problem by combining several basic behaviours. The solution does not arise from the behaviour of one single individual, but it <em>emerges</em> from the interactions between the individuals.</p>
 <p>The most famous example of such a system is the <a class="reference external" href="http://staff.washington.edu/paymana/swarm/colorni92-ppsn.pdf">ant colony optimisation algorithm</a>, proposed in 1992 by Marco Dorigo for his PhD thesis. This algorithm can be used, for example, to compute a solution to the Travelling Salesman Problem (TSP). Hundreds of agents walk the graph more or less randomly, and exchange with each other on the quality of their respective solutions so as to influence the other agent’s decision for the next iteration.</p>
 <p>This research is about programming systems that interact with each other to compute a solution.</p>
 </li>
@@ -142,17 +144,18 @@
 <h2>4. To be remembered<a class="headerlink" href="#to-be-remembered" title="Permalink to this headline">¶</a></h2>
 <p>Due to the variety of origins of multiagent research, there exists several definition of agents and multiagent systems. However, after 25 years of existence, the MAS research community came to a relatively good level of agreement on the key notions.</p>
 <ul>
-<li><dl class="simple">
-<dt>An <strong>agent</strong> is :</dt><dd><ul class="simple">
-<li><p>a <em>software process</em> (or part of a process, or possibly attached to some physical components <em>e.g.</em> in robotics…)</p></li>
-<li><p>with some <em>encapsulated data</em> (<em>i.e.</em> other agents/processes can’t modify directly this data),</p></li>
-<li><p>capable of providing a predefined set of <em>services</em> (its actions)</p></li>
-<li><p>and capable of <em>reasoning</em> about its actions and the other agents’ actions and to <em>coordinate</em> with the other agents so as to participate in a <strong>collective problem solving</strong>.</p></li>
+<li><dl class="first docutils">
+<dt>An <strong>agent</strong> is :</dt>
+<dd><ul class="first last simple">
+<li>a <em>software process</em> (or part of a process, or possibly attached to some physical components <em>e.g.</em> in robotics…)</li>
+<li>with some <em>encapsulated data</em> (<em>i.e.</em> other agents/processes can’t modify directly this data),</li>
+<li>capable of providing a predefined set of <em>services</em> (its actions)</li>
+<li>and capable of <em>reasoning</em> about its actions and the other agents’ actions and to <em>coordinate</em> with the other agents so as to participate in a <strong>collective problem solving</strong>.</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>A <strong>multiagent system</strong> (MAS) is a group of agents that share a <em>common environment</em> and that act in a <em>distributed</em> manner (the agents runtime are supposed to be <em>asynchronous</em>) to solve a problem for a <em>user</em>.</p>
+<li><p class="first">A <strong>multiagent system</strong> (MAS) is a group of agents that share a <em>common environment</em> and that act in a <em>distributed</em> manner (the agents runtime are supposed to be <em>asynchronous</em>) to solve a problem for a <em>user</em>.</p>
 <p>This last element (the user) is important: a MAS always has a predefined purpose, and it is important to define the expected outcomes, should it be a solution to a concrete problem (<em>e.g.</em> a path in a TSP problem) or a set of observable properties in a multiagent based simulation.</p>
 </li>
 </ul>
@@ -194,7 +197,7 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">1.1. a Brief History of Multiagent Systems</a><ul>
+<li><a class="reference internal" href="#">I.1. a Brief History of Multiagent Systems</a><ul>
 <li><a class="reference internal" href="#mas-as-seen-by-a-software-engineer">1. MAS as seen by a software engineer</a></li>
 <li><a class="reference internal" href="#mas-as-seen-by-a-distributed-systems-engineer">2. MAS as seen by a distributed systems engineer</a></li>
 <li><a class="reference internal" href="#mas-as-seen-by-an-artificial-intelligence-engineer">3. MAS as seen by an Artificial Intelligence engineer</a><ul>
@@ -215,7 +218,7 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="cours-1.html"
-                        title="previous chapter">1. Introduction to MAS : definitions and implementation of a platform</a></p>
+                        title="previous chapter">Multiagent Systems: architercture and reasoning – First session</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="part-2.html"
                         title="next chapter">I.2. What Is an Agent</a></p>
@@ -227,11 +230,13 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -250,14 +255,14 @@
           <a href="part-2.html" title="I.2. What Is an Agent"
              >next</a> |</li>
         <li class="right" >
-          <a href="cours-1.html" title="1. Introduction to MAS : definitions and implementation of a platform"
+          <a href="cours-1.html" title="Multiagent Systems: architercture and reasoning – First session"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MultiAgent Systems 2020-2021 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Emmanuel Hermellin, Wassila Ouerdane, Nicolas Sabouret.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

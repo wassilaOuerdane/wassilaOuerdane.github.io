@@ -1,7 +1,7 @@
-1. Introduction to MAS : definitions and implementation of a platform
+Multiagent Systems: architercture and reasoning -- First session
 ================================================================
 
-Agenda -- Recall
+General presentation of the course (Agenda)
 -------------------------------------------
 
 This course aims at presenting basic notions and concepts of multi-agent systems. It is organised as follows:
@@ -14,8 +14,12 @@ This course aims at presenting basic notions and concepts of multi-agent systems
 6. Friday, April the 9th, 2021 : Argumentation-based negotiation II: what is a negotiation protocol?
 7. Friday, April the 16th, 2021 : Practical session
 
+The first three sessions will give you the basics of MAS architectures and platforms. Based on this knowledge, you will implement a simple multi-agent based simulation (session 2) that will be evaluated by the teachers. This evaluation will be based on your source code and a very short report of your work. Its aim is to assess that you have acquired the basics of MAS.
 
-Session 1. 
+Sessions 3 to 7 will be dedicated to a more complex project that combines argumentation and negotiation models with the MAS architecture. This will give rise to a second multi-agent based model.
+
+
+First session
 -------------
 
 This first session aims at defining and guiding you through the comprehension of the notions of *autonomous agent* and *multi-agent system* (a.k.a. MAS). It alternates lecture parts (in COVID context, we chose to provide you with as much information as possible to allow you to understand the course by yourself) with practical work (which means that you'll have to implement things to understand the underlying concepts).
