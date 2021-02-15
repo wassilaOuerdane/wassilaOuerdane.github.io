@@ -1,0 +1,42 @@
+Multiagent Systems: architercture and reasoning
+================================================================
+
+General presentation of the course (Agenda)
+-------------------------------------------
+
+This course aims at presenting basic notions and concepts of multi-agent systems. It is organised as follows:
+
+1. Friday, March the 5th, 2021 : Introduction to MAS : definitions and implementation of a platform
+2. Friday, March the 12th, 2021 : Multiagent simulation : preys and predators
+3. Friday, March the 19th, 2021 : Interaction mechanisms : models and implementation
+4. Friday, March the 26th, 2021 : Practical session
+5. Friday, April the 2nd, 2021 : Argumentation-based negotiation I: what is argumentation?
+6. Friday, April the 9th, 2021 : Argumentation-based negotiation II: what is a negotiation protocol?
+7. Friday, April the 16th, 2021 : Practical session
+
+The first three sessions will give you the basics of MAS architectures and platforms. Based on this knowledge, you will implement a simple multi-agent based simulation (session 2) that will be evaluated by the teachers. This evaluation will be based on your source code and a very short report of your work. Its aim is to assess that you have acquired the basics of MAS.
+
+Sessions 3 to 7 will be dedicated to a more complex project that combines argumentation and negotiation models with the MAS architecture. This will give rise to a second multi-agent based model.
+
+
+Contents
+-------------
+
+This first session aims at defining and guiding you through the comprehension of the notions of *autonomous agent* and *multi-agent system* (a.k.a. MAS). It alternates lecture parts (in COVID context, we chose to provide you with as much information as possible to allow you to understand the course by yourself) with practical work (which means that you'll have to implement things to understand the underlying concepts).
+
+We shall begin with a brief history of MAS (first part). We then present the computational definition of an agent and we question its implementation (second part). The third part of the course will introduce to the *Mesa library* for agent-based modelling.
+
+All implementation in this course is done using the Python programming language. The reason for this is that students at CentraleSupélec are familiar with this language. However, it is important to note that existing multiagent platforms mostly use different high-level programming languages such as Java, C++ or C#. Indeed, these languages are more time-efficient, they better support parallel computing, network-based architectures or object-oriented models. The most popular multiagent platforms are `Jade <https://jade.tilab.com/>`_ (especially for system programming) and `Repast Symphony <https://repast.github.io/>`_ (especially for social simulation). Both use the Java programming language.
+
+The understanding of concepts through their implementation in Python is an important part of this session. Take the time to achieve all practical exercises to understand the difficulty of MAS programming before you switch to the Mesa library (which does all the job for you). Please use your favorite IDE for programming in Python. We do not care if you prefer to use Pycharm, Visual Studio, pyzo or a Jupyter notebook, as long as you structure your work in separate files and folders.
+
+
+References
+~~~~~~~~~~
+
+- Ferber, J. (1995), *Les Systèmes Multi-Agents*, InterEditions. **(French version)**
+- Ferber, J. (1999), *Multi-agent systems: An introduction to distributed artificial intelligence*, Addison Wesley. **(English version)**
+- Michael Wooldridge (2002), *An Introduction to MultiAgent Systems*, John Wiley & Sons Ltd.
+- `The AgentLink roadmap <http://www.agentlink.org/roadmap/>`_
+
+
